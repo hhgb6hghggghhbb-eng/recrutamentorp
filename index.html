@@ -955,6 +955,13 @@
         <input type="text" id="player-name" placeholder="Nome do Player" />
       </div>
 
+      <div class="player-info">
+        <label>ID Recrutador:</label>
+        <input type="text" id="recruiter-id" placeholder="ID do Recrutador" />
+        <label>Nome Recrutador:</label>
+        <input type="text" id="recruiter-name" placeholder="Nome do Recrutador" />
+      </div>
+
       <form id="quiz-form">
         <!-- ETAPA 1 -->
         <div class="etapa" id="etapa-1">
@@ -1958,6 +1965,8 @@
       function exportPDF() {
         const id = document.getElementById("player-id").value.trim();
         const name = document.getElementById("player-name").value.trim();
+        const recruiterId = document.getElementById("recruiter-id").value.trim();
+        const recruiterName = document.getElementById("recruiter-name").value.trim();
         const c = document.getElementById("correct-count").textContent;
         const e = document.getElementById("incorrect-count").textContent;
         const pct = document.getElementById("percentage").textContent;
@@ -2047,6 +2056,8 @@
     <div class="info-box">
         <p><strong>ID:</strong> ${id}</p>
         <p><strong>Nome:</strong> ${name}</p>
+        <p><strong>Recrutador ID:</strong> ${recruiterId}</p>
+        <p><strong>Recrutador:</strong> ${recruiterName}</p>
         <p><strong>Data:</strong> ${new Date().toLocaleDateString("pt-BR")} às ${new Date().toLocaleTimeString("pt-BR")}</p>
     </div>
     
